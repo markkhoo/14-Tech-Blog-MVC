@@ -24,7 +24,7 @@ const sess = {
   store: new SequelizeStore({
     db: sequelize
   }),
-  maxAge: (Date.now() + (5 * 1000))
+  // maxAge: (Date.now() + (5 * 1000)) // Attempt to make the session last 5 seconds for testing 
 };
 
 // 
