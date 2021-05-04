@@ -71,7 +71,7 @@ router.get('/post/:id', withAuth, async (req, res) => {
         });
 
         const post = postData.get({ plain: true });
-console.log(post); console.log(post.comments[0].user.name);
+
         //
         res.render('detailedPost', {
             post,
