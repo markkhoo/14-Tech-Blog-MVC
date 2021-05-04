@@ -1,0 +1,13 @@
+<div>
+    <h3>{{post.title}}</h3>
+    <p>{{post.user.name}}</p>
+    <p>{{format_date post.date_created}}</p>
+    <p>{{post.content}}</p>
+</div>
+{{#each post.comments as |comment|}}
+<div>
+    <p>{{comment.content}}</p>
+    <p>{{comment.user.name}}</p>
+    <p>{{format_date comment.date_created}}</p>
+</div>
+{{/each}}
