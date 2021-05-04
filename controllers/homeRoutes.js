@@ -19,7 +19,8 @@ router.get('/', async (req, res) => {
 
         // Pass serialized data for handlebar
         res.render('homepage', {
-            posts
+            posts,
+            logged_in: req.session.logged_in
         });
 
     } catch (err) {
