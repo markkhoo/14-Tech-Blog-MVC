@@ -1,0 +1,8 @@
+{{#each posts as |post|}}
+<div>
+    <p>{{post.title}}</p>
+    <p>{{post.user.name}}</p>
+    <p>{{format_date post.date_created}}</p>
+    <p>{{post.content}}</p>
+</div>
+{{/each}}
