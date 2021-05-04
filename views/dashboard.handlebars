@@ -1,3 +1,5 @@
+<h2>{{user.name}}'s Posts</h2>
+
 {{#each user.posts as |post|}}
 <p>{{post.title}}</p>
 <p>{{format_date post.date_created}}</p>
