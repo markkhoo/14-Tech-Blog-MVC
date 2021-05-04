@@ -23,7 +23,8 @@ const sess = {
   saveUninitialized: true,
   store: new SequelizeStore({
     db: sequelize
-  })
+  }),
+  maxAge: (Date.now() + (5 * 1000))
 };
 
 // 

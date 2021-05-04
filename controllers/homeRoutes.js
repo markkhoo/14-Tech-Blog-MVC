@@ -30,7 +30,10 @@ router.get('/', async (req, res) => {
 router.get('/login', async (req, res) => {
     try {
         // Catches incase user is logged in already
-
+        if (req.session.login_in) {
+            res.redirect('/'); // Remember to change this route
+            return;
+        };
 
         // Render login else
         res.render('login');
@@ -38,5 +41,7 @@ router.get('/login', async (req, res) => {
         res.status(500).json(err);
     };
 });
+
+
 
 module.exports = router;
